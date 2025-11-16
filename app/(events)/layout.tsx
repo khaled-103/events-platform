@@ -1,0 +1,10 @@
+import Navbar from "@/components/NavBar";
+
+export default function EventsLayout({ children }: { children: React.ReactNode }) {
+    return (
+        <>
+            <Navbar />
+            {children}
+        </>
+    );
+}
