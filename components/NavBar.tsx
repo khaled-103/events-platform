@@ -5,26 +5,19 @@ import { AiOutlineMenu, AiOutlineClose, AiOutlineUser } from "react-icons/ai";
 import { MdOutlineEventNote } from "react-icons/md";
 import Logo from "./Logo";
 import LogoutBtn from "./LogoutBtn";
-
-const navLinks = [
-  { name: "Browse Events", href: "/events" },
-  { name: "Create Event", href: "/create" },
-  { name: "About Us", href: "/about" },
-];
+import { navLinks } from "@/constants";
 
 const userDropdownLinks = [
   { name: "My Profile", href: "/profile", icon: AiOutlineUser },
   { name: "My Events", href: "/user/events", icon: MdOutlineEventNote },
 ];
-
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isAuthenticated = true; // Simulated
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-
   return (
-    <header>
-      <nav className="bg-gray-950 shadow-xl sticky top-0 z-50 backdrop-blur-md">
+    <header className="sticky top-0 z-50">
+      <nav className="bg-gray-950 shadow-xl backdrop-blur-md">
         <div className="self-container">
           <div className="flex justify-between items-center h-16">
             <div className="shrink-0">

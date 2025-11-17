@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
 
 export default function EventsLayout({ children }: { children: React.ReactNode }) {
@@ -5,6 +6,7 @@ export default function EventsLayout({ children }: { children: React.ReactNode }
         <>
             <Navbar />
             {children}
+            <Footer/>
         </>
     );
 }
