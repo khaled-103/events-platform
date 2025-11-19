@@ -1,7 +1,9 @@
+import Hero from "@/components/Home/Hero";
+
 export default function Home() {
   return (
     <main className="self-container">
-      <h1>Welcome to the Events Home Page</h1>
+      <Hero />
     </main>
   );
 }

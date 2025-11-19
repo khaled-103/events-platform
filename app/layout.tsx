@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${schibstedGrotesk.className} antialiased`}
+        className={`${schibstedGrotesk.className} bg-neutral-950 text-foreground antialiased`}
       >
         {children}
       </body>
