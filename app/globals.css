@@ -6,28 +6,16 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #060010;
+  --color-foreground: #ededed;
   --font-schibsted-grotesk: var(--font-schibsted-grotesk);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 html{
   scroll-behavior: smooth;
   font-size: clamp(14px, 1.2vw + 1px, 50px);
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-}
-
 .self-container{
   @apply max-w-6xl mx-auto px-4 md:px-6 lg:px-8;
 }
