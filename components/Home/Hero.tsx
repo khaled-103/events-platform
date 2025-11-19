@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Hero() {
   return (
     <section className="relative pt-20 pb-28 overflow-hidden">
@@ -23,19 +25,19 @@ export default function Hero() {
 
           {/* CTA buttons */}
           <div className="flex gap-4 mt-4">
-            <a
+            <Link
               href="#events"
               className="px-6 py-3 bg-rose-500 hover:bg-rose-400 text-black font-semibold rounded-xl transition"
             >
               Explore Events
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/event/new"
               className="px-6 py-3 bg-transparent border border-rose-500 hover:bg-rose-500/20 text-rose-400 font-semibold rounded-xl transition"
             >
               Add Event
-            </a>
+            </Link>
           </div>
         </div>
       </div>
