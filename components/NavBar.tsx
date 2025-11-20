@@ -6,6 +6,7 @@ import Link from "next/link";
 import { AiOutlineUser,AiOutlineMenu,AiOutlineClose } from "react-icons/ai";
 import { MdOutlineEventNote } from "react-icons/md";
 import LogoutBtn from "./LogoutBtn";
+import useClickOutside from "@/hooks/useClickOutside";
 const userDropdownLinks = [
   { name: "My Profile", href: "/profile", icon: AiOutlineUser },
   { name: "My Events", href: "/user/events", icon: MdOutlineEventNote },
@@ -49,8 +50,6 @@ export default function Navbar() {
     </header>
   );
 }
-
-
 export  function DesktopLinks({ navLinks }: { navLinks: typeof import("@/constants").navLinks }) {
   return (
     <div className="hidden md:flex items-center gap-8">
@@ -67,9 +66,6 @@ export  function DesktopLinks({ navLinks }: { navLinks: typeof import("@/constan
     </div>
   );
 }
-
-
-
 export function DesktopAuth({isAuthenticated}:{isAuthenticated:boolean}) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const userName = "Alex";
@@ -101,8 +97,6 @@ export function DesktopAuth({isAuthenticated}:{isAuthenticated:boolean}) {
     </div>
   );
 }
-
-
 export  function UserDropdown({
   userName,
   isDropdownOpen,
@@ -112,8 +106,9 @@ export  function UserDropdown({
   isDropdownOpen: boolean;
   setIsDropdownOpen: (val: boolean) => void;
 }) {
+  const dropdownRef = useClickOutside<HTMLDivElement>(() => setIsDropdownOpen(false));
   return (
-    <div className="relative">
+    <div ref={dropdownRef} className="relative">
       <button
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         className="flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-rose-600/20 to-purple-600/20 text-rose-100 hover:from-rose-500/30 hover:to-purple-500/30 transition-all duration-300 shadow-md hover:shadow-rose-500/20"
@@ -129,7 +124,6 @@ export  function UserDropdown({
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={() => setIsDropdownOpen(false)}
                 className="flex items-center gap-3 px-5 py-3.5 text-rose-100 text-sm hover:bg-rose-950/50 hover:text-rose-300 transition-colors duration-200"
               >
                 <item.icon className="w-5 h-5 text-rose-400" />
@@ -146,8 +140,6 @@ export  function UserDropdown({
     </div>
   );
 }
-
-
 export function MobileToggleBtn({
   isMobileMenuOpen,
   toggleMobileMenu,
