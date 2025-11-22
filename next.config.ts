@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   reactCompiler:true,
   /* config options here */
   experimental:{
-    turbopackFileSystemCacheForDev:false,
+    turbopackFileSystemCacheForDev:true,
   }
 };
 

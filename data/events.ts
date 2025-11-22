@@ -1,0 +1,43 @@
+export const latestEvents = [
+  {
+    id: "1",
+    title: "Tech Conference 2025",
+    date: "Dec 20, 2025",
+    time: "6:00 PM",
+    image: "/images/events/event1.jpg",
+    location: "Ramallah",
+    category: "Technology",
+    tags: ["Free", "Popular", "AI"],
+  },
+  {
+    id: "2",
+    title: "Music Night Festival",
+    date: "Jan 10, 2026",
+    time: "6:00 PM",
+    image: "/images/events/event2.jpg",
+    location: "Gaza City",
+    category: "Music",
+    tags: ["VIP", "Limited", "Outdoor"],
+  },
+  {
+    id: "3",
+    title: "Business Growth Meetup",
+    date: "Feb 2, 2026",
+    time: "6:00 PM",
+    image: "/images/events/event3.jpg",
+    location: "Nablus",
+    category: "Business",
+    tags: ["Networking", "Paid"],
+  },
+  
+  {
+    id: "4",
+    title: "Music Night khaled",
+    date: "Jan 10, 2026",
+    time: "6:00 PM",
+    image: "/images/events/event4.jpg",
+    location: "Gaza City",
+    category: "Music",
+    tags: ["VIP", "Limited", "Outdoor"],
+  },
+];
